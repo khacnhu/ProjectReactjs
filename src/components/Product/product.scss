@@ -1,0 +1,99 @@
+.product{
+    display: flex;
+    width: 100%;
+    .productContainer{
+        flex: 6;
+
+        .productHeader{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+        
+            .productTitle{
+                color: black;
+                font-size: 36px;
+                font-weight: 700
+            }
+
+            button{
+                padding: 5px 20px;
+                background-color: palevioletred;
+                color: white;
+                border: 1px solid lightgray;
+                cursor: pointer;
+            }
+
+        };
+
+        .searchProduct{
+            // width: fit-content;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+
+            input{
+                width: 200px;
+                padding: 10px;
+                margin-right: 12px;
+            }
+
+            .btnSearch {
+                background-color: palevioletred;
+                padding: 0px 8px;
+                margin-right: 12px;
+                color: white;
+                border: 1px solid rgba(0,0,0,0.47);
+                cursor: pointer;
+            }
+
+            .btnRefresh {
+                background-color: purple;
+                padding: 0px 8px;
+                color: white;
+                border: 1px solid rgba(0,0,0,0.47);
+                cursor: pointer;
+            }
+
+        };
+
+        .productInfor{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .productItems{
+                padding: 20px;
+                margin: 20px;
+                box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+                -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+                display: flex;
+                width: 40%;
+                transition: ease-in-out 0.3s;
+
+                &:hover{
+                    transform: translateY(-10px);
+                }
+
+                .imageProduct{
+                    width: 200px;
+                    height: 200px;
+
+                }
+
+                .productDescription{
+                    padding: 8px;
+                    p{
+                        margin-top: 12px;
+                    }
+                }
+
+            }
+        }
+        
+    };
+
+}
+
+
+
+

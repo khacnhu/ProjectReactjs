@@ -1,0 +1,90 @@
+.sidebar{
+    // background-color: lightcoral;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    flex: 1;
+    min-height: 100vh;
+    // background-color: pink;
+    .top{
+        // background-color: lightcoral;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+        .logo{
+            font-size: 20px;
+            font-weight: bold;
+            color: purple;
+        }
+    }
+
+    .center{
+        padding-left: 10px;
+        ul{
+            margin: 0px;
+            padding: 0px;
+            .title{
+                font-size: 10px;
+                font-weight: bold;
+                color: #999;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+
+            li{
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #ece8ff;
+                }
+
+                .icon{
+                    font-size: 18px;
+                    color: #7451f8;
+                }
+
+                span{
+                    font-size: 16   px;
+                    font-weight: 600;
+                    color: #888;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        margin: 16px;
+        
+        .colorOptions{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid lightblue;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: 10px;
+            
+            &:nth-child(1){
+                background-color: whitesmoke;
+                box-shadow: 1px 1px 10px 10px rgba(255,255,255,0.6);
+            }
+
+            &:nth-child(2){
+                background-color: #333;
+                box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.2);
+            }
+
+            &:nth-child(3){
+                background-color: darkblue;
+                box-shadow: 1px 1px 10px 10px rgba(0,0,139,0.2);
+            }
+        }
+    }
+}

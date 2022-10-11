@@ -1,0 +1,104 @@
+.registerForm{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+
+    .banner{
+        padding: 20px;
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+        color: rgb(163, 84, 163);
+        font-weight: 800;
+        font-size: 30px;
+        text-align: center;
+        .bannerQr{
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            padding: 8px;
+        }    
+    }
+
+
+    
+    .register_content{
+        background-color: rgb(163, 84, 163);
+        padding: 30px;
+        color: whitesmoke;
+        border-radius: 30px;
+        box-shadow: 2px 4px 10px 10px lightblue;
+
+        h2{
+            margin-bottom: 16px;
+        }
+        p{
+
+        }
+
+        input{
+            margin-bottom: 12px;
+            padding: 4px;
+            width: 94%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        input[type=text]{
+            color: red
+        }
+
+        button{
+            padding: 4px;
+            color: black;
+            font-weight: 600;
+            margin-left: 38px;
+            margin-top: 12px;
+            border-radius:8px;
+            border: none;
+            transition: ease-in-out 0.2s;
+            cursor: pointer ;
+
+            &:hover{
+                color: purple
+            }
+
+        }
+
+        .linkRegister{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            .login{
+                text-decoration: none;
+                font-weight: 700;
+                color: whitesmoke;
+                transition: ease-in-out 0.2s;
+
+                &:hover{
+                    color: blue
+                }
+
+
+            }
+            .home{
+                text-decoration: none;
+                font-weight: 700;
+                color: whitesmoke;
+                transition: ease-in-out 0.2s;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+        }
+
+
+    }
+
+}

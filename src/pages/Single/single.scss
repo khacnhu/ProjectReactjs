@@ -1,0 +1,28 @@
+
+
+
+.single{
+    display: flex;
+    width: 100%;
+    .singleContainer{
+        flex:6;
+        .top{
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+
+            .left{
+                flex: 1;
+                padding: 20px;
+                box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+                -webkit-box-shadow: 2px 4px 10px 1px(0,0,0,0.47)
+
+            };
+
+            .right{
+                flex: 2;
+            };
+
+        }
+    }
+}

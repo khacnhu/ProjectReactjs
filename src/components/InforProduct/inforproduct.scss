@@ -1,0 +1,67 @@
+.infor {
+    display: flex;
+    width: 100%;
+    .inforContainer{
+        flex: 6;
+    }
+    
+    .header{
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+        width: 36%;
+        color: purple;
+        font-size: 20px;
+        font-weight: 600;
+    }   
+
+    .inforProduct{
+        display: flex;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+        justify-content: space-between;
+
+        .title{
+            
+            text-align: center;
+            
+            p{
+                margin-bottom: 12px;
+                color: purple;
+                font-size: 20px;
+                font-weight: 600;
+                transition: ease-out 0.3s;
+
+                &:hover{
+                   color: palevioletred;
+                }
+            }
+        }
+
+        .description{
+            margin-right: 160px;
+            p{
+                padding: 6px;
+            }
+
+        }
+
+        .btnBack {
+            button{
+                background-color: purple;
+                border: 1px solid lightgrey;
+                padding: 6px 24px;
+                color: white;
+                transition: ease-in-out 0.2s;
+
+                &:hover{
+                    background-color: palevioletred;
+                }
+
+            }
+        }
+    }
+}

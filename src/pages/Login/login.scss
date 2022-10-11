@@ -1,0 +1,64 @@
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    .login{
+        background-color: rgb(163, 84, 163);
+        padding: 30px;
+        color: whitesmoke;
+        border-radius: 30px;
+        box-shadow: 2px 4px 10px 10px lightblue;
+        
+        h2{
+            color: p;
+            margin-bottom: 20px;
+        }
+
+        input{
+            margin-bottom: 12px;
+            padding: 4px;
+            width: 94%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button{
+            padding: 6px 16px;
+            color: black;
+            font-weight: 600;
+            margin-left: 48px;
+            margin-top: 12px;
+            border-radius:8px;
+            border: none;
+            transition: ease-in-out 0.2s;
+            cursor: pointer ;
+
+            &:hover{
+                color: purple
+            }
+        }
+
+        .loginHeader{
+            margin-top: 20px;
+            // text-align: center;
+            .register{
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            .home{
+                text-decoration: none;
+                color: whitesmoke;
+                // margin-right: 20px;
+                .homeTitle{
+                    margin-left: 4px;
+                }
+            }
+        }
+
+    }
+
+}
