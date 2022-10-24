@@ -8,11 +8,25 @@ import { New } from './pages/New/New';
 import { Product } from './components/Product/Product';
 import { InforProduct } from './components/InforProduct/InforProduct';
 import { Register } from './pages/Register/Register';
+import {Verifyemail} from "./components/Verifyemail/Verifyemail";
+import {Resetpassword} from "./components/ResetPassword/Resetpassword";
+import "./style/dark.scss";
+import {useSelector} from "react-redux";
+import { Notfound } from './components/NotFound/Notfound';
+import {Set} from "./components/Set/Set";
+import {ChangePassword} from "./components/ChangePassword.jsx/ChangPassword";
+import {Notification} from "./pages/Notification/Notification";
 
 
 function App() {
+
+  // const dispatch = useDispatch()
+  const {theme} = useSelector((state) => state.theme) 
+  console.log(theme)
+
+
   return (
-    <div className="App">
+    <div className= {theme ? "appTheme" : "app"} >
       <BrowserRouter>
         <Routes>
           <Route path='/'>
@@ -20,6 +34,11 @@ function App() {
             
             <Route path = "login" element={<Login/>} />
             <Route path = "register" element = {<Register/>} />
+            <Route path = "verifyEmail" element = {<Verifyemail/>} />
+            <Route path = "resetpassword" element = {<Resetpassword/>} />
+            <Route path = "changepassword" element = {<ChangePassword/>} />
+            <Route path = "settings" element = {<Set/>} />
+            <Route path = "notification" element = {<Notification/>}  />
             
             <Route path ="users" >
               <Route index element={<List/>}/>
@@ -33,6 +52,7 @@ function App() {
             </Route>
 
           </Route>
+          <Route path = "*" element = {<Notfound/>} />
         </Routes>
       </BrowserRouter>
     </div>

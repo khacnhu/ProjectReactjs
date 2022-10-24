@@ -1,0 +1,22 @@
+.notfound{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .header{
+        color: purple;
+        font-size: 80px;
+    }
+
+    .home{
+        text-decoration: none;
+        font-size: 30px;
+        transition: ease-in-out 0.2s;
+        &:hover{
+            color: palevioletred;
+        }
+    }
+    
+}

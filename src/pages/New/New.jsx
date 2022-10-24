@@ -46,7 +46,7 @@ export const New = () => {
               </div>
 
               <div className = "formInput">
-                <label>Password</label>
+                <label>Age</label>
                 <input type = "text" placeholder='Nhap Password'/>
               </div>
 

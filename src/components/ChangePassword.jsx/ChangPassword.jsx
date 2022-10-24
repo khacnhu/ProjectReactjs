@@ -1,8 +1,11 @@
+// 
+
+
 import React from "react";
-import "./resetpassword.scss"
+import "./changepassword.scss"
 
 
-export const Resetpassword = () => {
+export const ChangePassword = () => {
   return (
     <div className="reset">
       <div className="banner">
@@ -34,7 +37,10 @@ export const Resetpassword = () => {
         <div className="resetForm">
 
             <form  >
-                <h2 className="registerTitle">RESET PASSWORD</h2>
+                <h2 className="registerTitle">CHANGE PASSWORD</h2>
+                <label htmlFor="newpassword" >Old Password:</label>
+                <input id = "newpassword" type="text" placeholder="Type your password ..." />
+                <br></br>
                 <label htmlFor="newpassword" >New Password:</label>
                 <input id = "newpassword" type="text" placeholder="Type your password ..." />
                 <br></br>

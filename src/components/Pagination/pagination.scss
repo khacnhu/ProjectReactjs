@@ -1,0 +1,88 @@
+.pagination{
+    margin-top: 24px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 12px;
+    gap: 5px;
+    list-style: none;
+
+    .page-num{
+        padding: 8px 15px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: 500;
+        
+        &:hover{
+            background-color: #5AB1BB;
+            color: white
+        }
+
+    }
+
+    .active{
+        background-color: #5AB1BB;
+    }
+
+}
+
+// .datatable{
+//     display:flex
+// }
+
+.dataHeader{
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    width: 25%;
+    font-weight: 700;
+    span{
+        color: purple;
+        font-size: 32px;
+    }
+
+    button{
+        margin-left: 20px;
+        padding: 10px;
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: ease-in-out 0.2s;
+        &:hover{
+            background-color: rgb(224, 8, 224);
+        }
+    }
+}
+
+.dataSearch{
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.47);
+    .inputSearch{
+        padding: 12px;
+        input{
+            margin-right: 24px;
+            width: 200px;
+            height: 28px;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            margin-top: 12px;
+            background-color: purple;
+            transition: ease-in-out 0.2s;
+            padding: 4px 16px;
+            border: none;
+            &:hover{
+                background-color: rgb(224, 8, 224);
+            }
+        }
+    }
+
+}

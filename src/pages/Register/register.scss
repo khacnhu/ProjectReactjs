@@ -23,7 +23,7 @@
             height: 100px;
             padding: 8px;
         }    
-    }
+    };
 
 
     
@@ -37,9 +37,34 @@
         h2{
             margin-bottom: 16px;
         }
-        p{
 
+
+
+
+        .offscreen {
+            position: absolute;
+            left: -9999px;
         }
+        .errmsg {
+            background-color: lightpink;
+            color: firebrick;
+            font-weight: bold;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        // .instructions {
+        //     font-size: 0.75rem;
+        //     border-radius: 0.5rem;
+        //     background: #000;
+        //     color: #fff;
+        //     padding: 0.25rem;
+        //     position: relative;
+        //     bottom: -10px;
+        // }
+
+
+
 
         input{
             margin-bottom: 12px;
@@ -57,11 +82,14 @@
             padding: 4px;
             color: black;
             font-weight: 600;
-            margin-left: 38px;
+            // margin-left: 38px;
+            align-self: center;
+            // position: absolute;
             margin-top: 12px;
             border-radius:8px;
             border: none;
             transition: ease-in-out 0.2s;
+            
             cursor: pointer ;
 
             &:hover{

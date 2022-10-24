@@ -11,21 +11,23 @@ export const Product = () => {
   // console.log(products)
   const [items, setItems] = useState(products)
   // console.log(items)
+  const [searchProduct, setProduct] = useState("")
+
 
   const filterProduct = () => {
-    let inputInfor = document.getElementById("inputInfor")
-    console.log(inputInfor)
+    // let inputInfor = document.getElementById("inputInfor")
+    // console.log(inputInfor)
     let newitems = items.slice()
     setItems(newitems.filter(product => {
-      return product.productName.includes(inputInfor.value)
+      return product.productName.includes(searchProduct)
     }
     ))
   }
 
   const refreshProduct = () => {
-    let inputInfor = document.getElementById("inputInfor")
+    // let inputInfor = document.getElementById("inputInfor")
     setItems(products)
-    inputInfor.value = ""
+    setProduct("")
   }
 
   const filterItem = () => {
@@ -45,7 +47,7 @@ export const Product = () => {
             </div>
 
             <div className='searchProduct' >
-              <input type = "text" placeholder='type infor about name product' id='inputInfor' onChange={(e)=>e.target.value} />
+              <input type = "text" value = {searchProduct} onChange = {(e)=> setProduct(e.target.value)} placeholder='type infor about name product' id='inputInfor' />
               <button onClick={filterProduct} className = "btnSearch" >Search</button>
               <button onClick = {refreshProduct} className = "btnRefresh" >Refresh</button>
             </div>

@@ -60,19 +60,24 @@ export const Table = () => {
   return (
     <div className='table' >
         <table>
+          <thead>
+
             <tr>
-                <th>Tracking ID</th>
-                <th>Product</th>
-                <th>Customer</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Payment Method</th>
-                <th>Status</th>
+                <td>Tracking ID</td>
+                <td>Product</td>
+                <td>Customer</td>
+                <td>Date</td>
+                <td>Amount</td>
+                <td>Payment Method</td>
+                <td>Status</td>
             </tr>
 
+          </thead>
+          <tbody>
+            
             {
-                rows.map((row) => (
-                    <tr key = {row.id}>
+              rows.map((row) => (
+                <tr key = {row.id}>
                         <td> {row.id} </td>
                         <td>
                             <img src = {row.img} alt = "img" className = "imageproduct" />
@@ -87,7 +92,7 @@ export const Table = () => {
 
                 ) )
             }
-
+            </tbody>
           
 
         </table>

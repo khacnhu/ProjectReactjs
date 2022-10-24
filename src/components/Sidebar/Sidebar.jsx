@@ -13,8 +13,28 @@ import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSyst
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined"
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from 'react-router-dom';
+import {useDispatch, useSelector} from "react-redux";
+import {changetheme} from "../../featureRedux/slice/Theme/themeSlice"
+
 
 export const Sidebar = () => {
+
+  let {theme} = useSelector((state) => state.theme) 
+
+  const dispatch = useDispatch()
+
+  // useEffect(()=>{
+  //   // document.documentElement.dataset.theme = theme
+  //   let theme = localStorage.setItem("theme", theme)
+  // }, [theme])
+
+  const handleChange = () => {
+    const next = theme === false ? true : false
+    // eslint-disable-next-line no-undef
+    dispatch(changetheme(next))
+
+  }
+
   return (
 
     <div className = "sidebar">
@@ -27,10 +47,13 @@ export const Sidebar = () => {
         <div className='center'>
            <ul>
                 <p className="title">MAIN</p>
-                <li>
-                  <DashboardIcon className = "icon"/>
-                  <span>Dashboard</span>
-                </li>
+                <Link to = "/" style = {{textDecoration: "none"}} >
+                  <li>
+                    <DashboardIcon className = "icon"/>
+                    <span>Dashboard</span>
+                  </li>
+
+                </Link>
                 <p className="title">LISTS</p>
                 <Link to = "/users" style = {{textDecoration: "none"}} >
                   <li>
@@ -63,10 +86,12 @@ export const Sidebar = () => {
                 <span>Stats</span>
                 </li>
 
-                <li>
-                  <NotificationsNoneIcon className="icon" />
-                  <span>Notifications</span>
-                </li>
+                <Link to = "/notification" style = {{textDecoration: "none"}} >
+                  <li>
+                    <NotificationsNoneIcon className="icon" />
+                    <span>Notifications</span>
+                  </li>
+                </Link>
 
                 <p className="title">SERVICE</p>
                 <li>
@@ -79,16 +104,21 @@ export const Sidebar = () => {
                   <span>Logs</span>
                 </li>
 
-                <li>
-                <SettingsApplicationsIcon className="icon" />
-                <span>Settings</span>
-                </li>
+                <Link to = "/settings" style = {{textDecoration: "none"}} >
+                  <li>
+                  <SettingsApplicationsIcon className="icon" />
+                  <span>Settings</span>
+                  </li>
+                </Link>
 
                 <p className = "title">USER</p>
-                <li>
-                <AccountCircleOutlinedIcon className="icon" />
-                <span>Profile</span>
-                </li>
+
+                <Link to = "/users/new" style = {{textDecoration: "none"}} >
+                  <li>
+                  <AccountCircleOutlinedIcon className="icon" />
+                  <span>Profile</span>
+                  </li>
+                </Link>
                 
                 <li>
                 <ExitToAppIcon className="icon" />
@@ -98,9 +128,9 @@ export const Sidebar = () => {
 
         </div>
         <div className='bottom'>
-          <div className="colorOptions"></div>
-          <div className="colorOptions"></div>
-          <div className="colorOptions"></div>
+          <div className="colorOptions" onClick={() => handleChange()} ></div>
+          <div className="colorOptions" onClick= {()=>handleChange()}   ></div>
+          {/* <div className="colorOptions"></div> */}
         </div>
 
     </div>

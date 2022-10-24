@@ -5,7 +5,8 @@ import { Sidebar } from '../../components/Sidebar/Sidebar'
 
 import Navbar from '../../components/Navbar/Navbar'
 // import Datatable from '../../components/Datatable/Datatable'
-import { Datatable } from '../../components/Datatable/Datatable'
+// import { Datatable } from '../../components/Datatable/Datatable'
+import { Pagination } from '../../components/Pagination/Pagination'
 
 export const List = () => {
   return (
@@ -14,7 +15,7 @@ export const List = () => {
       <Sidebar/>
       <div className='listContainer' >
           <Navbar/>
-          <Datatable/>
+         <Pagination itemsPerPage={4} />
       </div>
 
     

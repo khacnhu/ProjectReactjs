@@ -1,0 +1,96 @@
+.set{
+    display: flex;
+    width: 100%;
+    .setContainer{
+        // background-color: lightblue;
+        flex: 6;
+        .hrOne{
+            width: 90%;
+            left:0;
+            right: 0;
+            margin: auto;
+            border: 1px solid lightgray
+        }
+        .hrTwo{
+            width: 90%;
+            left:0;
+            right: 0;
+            margin: auto;
+            border: 1px solid lightgray
+        }
+
+        .setHeader{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            .setMyAccount{
+                font-size:12px;
+
+            }
+
+            .setDescription{
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .setImageHeader{
+                .setAvatar{
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .setMiddle{
+            display: flex;
+            padding: 20px;
+            .setDashboard{
+                font-size: 32px;
+                font-weight: 700;
+                color: purple;
+            }
+            .setList{
+                margin-left: 80px;
+                
+                ul {
+                    
+                    li{
+                        transition: ease-in-out 0.2s;
+                        &:hover{
+                            transform: translateX(10px);
+                            color: purple;
+                        }
+                    }
+                }
+            }
+        }
+
+        .setFooter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            .setAccount{
+                margin-right: 20px;
+            
+                .setAccountPass{
+                    color: red;
+                }
+            }
+
+            .setVipCustomer{
+                p{
+                   span{
+                    color: purple;
+                   }
+                }
+            }
+
+
+        }
+
+
+    }
+}   

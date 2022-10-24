@@ -3,7 +3,7 @@ import "./single.scss";
 import { Sidebar } from '../../components/Sidebar/Sidebar';
 import Navbar from '../../components/Navbar/Navbar';
 import { Chart } from "../../components/Chart/Chart";
-import { Datatable } from '../../components/Datatable/Datatable';
+// import { Datatable } from '../../components/Datatable/Datatable';
 
 export const Single = () => {
   return (
@@ -57,7 +57,7 @@ export const Single = () => {
 
         <div className = "bottom" >
           <h1 className = "title" style = {{textAlign: "center"}} >Last Transactions</h1>
-          <Datatable/>
+          {/* <Datatable/> */}
         </div>
     </div>
 
