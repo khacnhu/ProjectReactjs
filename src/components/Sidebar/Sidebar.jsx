@@ -14,12 +14,12 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined"
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux";
-import {changetheme} from "../../featureRedux/slice/Theme/themeSlice"
 
+import {lighttheme, darktheme} from "../../featureRedux/slice/Theme/themeSlice"
 
 export const Sidebar = () => {
 
-  let {theme} = useSelector((state) => state.theme) 
+  // let {theme} = useSelector((state) => state.theme) 
 
   const dispatch = useDispatch()
 
@@ -28,12 +28,21 @@ export const Sidebar = () => {
   //   let theme = localStorage.setItem("theme", theme)
   // }, [theme])
 
-  const handleChange = () => {
-    const next = theme === false ? true : false
-    // eslint-disable-next-line no-undef
-    dispatch(changetheme(next))
+  // const handleChange = () => {
+  //   const next = theme === false ? true : false
+  //   // eslint-disable-next-line no-undef
+  //   dispatch(changetheme(next))
 
+  // }
+
+  const lightChange = () =>{
+    dispatch(lighttheme())
   }
+
+  const darkChange = () => {
+    dispatch(darktheme())
+  }
+
 
   return (
 
@@ -128,8 +137,8 @@ export const Sidebar = () => {
 
         </div>
         <div className='bottom'>
-          <div className="colorOptions" onClick={() => handleChange()} ></div>
-          <div className="colorOptions" onClick= {()=>handleChange()}   ></div>
+          <div className="colorOptions" onClick={() => lightChange()} ></div>
+          <div className="colorOptions" onClick= {()=> darkChange()}   ></div>
           {/* <div className="colorOptions"></div> */}
         </div>
 

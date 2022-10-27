@@ -30,9 +30,6 @@ export const Product = () => {
     setProduct("")
   }
 
-  const filterItem = () => {
-
-  }
 
   return (
     <div className = "product" >
@@ -66,8 +63,8 @@ export const Product = () => {
                     <p> Số lượng nhập vào: {product.buy} </p>
                     <p> Độ ưa chuộng: {product.like} </p>
                     <p> Số lượng hàng còn lại: {product.remain} </p>
-                    <p> <Link to = "inforProduct" style={{textDecoration : "none", color: "palevioletred"} } >
-                        <button onClick = {filterItem(product)}>Detail Product</button>
+                    <p> <Link to = {`/products/${product.id}`} style={{textDecoration : "none", color: "palevioletred"} } >
+                        Detail Product
                     </Link> </p>
                   </div>
 

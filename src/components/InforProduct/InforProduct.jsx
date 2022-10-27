@@ -1,63 +1,62 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import { Sidebar } from '../Sidebar/Sidebar'
-import "./inforproduct.scss"
-import { products } from '../../product'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useSelector } from "react-redux";
+import Navbar from "../Navbar/Navbar";
+import { Sidebar } from "../Sidebar/Sidebar";
+import "./inforproduct.scss";
+// import { products } from '../../product'
+import { useParams, useNavigate } from "react-router-dom";
 
-export const InforProduct = () => { 
-    const navigate = useNavigate()
-    
-    const comeback = () => {
-        navigate("/products")
-    }   
+// import {selectProductById} from "../../featureRedux/slice/ProductSlice/ProductSlice"
+
+
+export const InforProduct = () => {
+  const { productId } = useParams();
+  console.log(productId);
+  const navigate = useNavigate();
+
+  let {products} = useSelector((state) => state.products)
+  let renderProduct = products.find(product => product.id === Number(productId))
+  console.log(renderProduct)
+
+  const comeback = () => {
+    navigate("/products");
+  };
   return (
-    <div className='infor'>
-        <Sidebar/>
-        <div className='inforContainer' >
-            <Navbar/>
-            <div className='header'>
-                DETAIL INFORMATION ABOUT PRODUCT
+    <div className="infor">
+      <Sidebar />
+      <div className="inforContainer">
+        <Navbar />
+        <div className="header">DETAIL INFORMATION ABOUT PRODUCT</div>
+
+        <div className="inforProduct">
+          {renderProduct && (
+            <div class = "productContain" >
+              <div className="title">
+                <p>Product Name</p>
+                <img src={renderProduct.img} alt="" />
+              </div>
+
+              <div className="description">
+                <p>Name: {renderProduct.productName}</p>
+                <p>company: {renderProduct.company} </p>
+                <p>madeIn: {renderProduct.madeIn} </p>
+                <p>type: {renderProduct.type} </p>
+                <p>date: {renderProduct.date} </p>
+                <p>countCustomer: {renderProduct.countCustomer} </p>
+                <p>sell: {renderProduct.sell} </p>
+                <p>buy: {renderProduct.buy} </p>
+                <p>amount: {renderProduct.buy} </p>
+                <p>like: {renderProduct.like} </p>
+                <p>remain: {renderProduct.remain} </p>
+              </div>
+
+              <div className="btnBack">
+                <button onClick={comeback}>Back</button>
+              </div>
             </div>
-
-            <div className='inforProduct' >
-            {
-                products.map(product => (
-                    <div>
-
-                    <div className='title' >
-                        <p>Product Name</p>
-                        <img src = {"https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg"} alt = ""  />
-                    </div>
-
-                    <div className = "description" >
-                        <p>present</p>
-                        <p>company</p>
-                        <p>madeIn</p>
-                        <p>type</p>
-                        <p>date</p>
-                        <p>countCustomer</p>
-                        <p>sell</p>
-                        <p>buy</p>
-                        <p>amount</p>
-                        <p>like</p>
-                        <p>remain</p>
-                    </div>
-
-                    <div className='btnBack' >
-                        <button onClick={comeback}>Back</button>
-                    </div>
-                    </div>
-
-
-                ) )
-
-            }
-
-
-            </div>
-
+          )}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};

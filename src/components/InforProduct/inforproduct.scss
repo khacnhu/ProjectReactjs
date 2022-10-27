@@ -42,7 +42,9 @@
         }
 
         .description{
+            margin-left: 80px;
             margin-right: 160px;
+            
             p{
                 padding: 6px;
             }
@@ -64,4 +66,9 @@
             }
         }
     }
+}
+
+
+.productContain{
+    display: flex;
 }

@@ -9,12 +9,16 @@ import { Product } from './components/Product/Product';
 import { InforProduct } from './components/InforProduct/InforProduct';
 import { Register } from './pages/Register/Register';
 import {Verifyemail} from "./components/Verifyemail/Verifyemail";
-import {Resetpassword} from "./components/ResetPassword/Resetpassword";
-import "./style/dark.scss";
-import {useSelector} from "react-redux";
 import { Notfound } from './components/NotFound/Notfound';
-import {Set} from "./components/Set/Set";
+import {Resetpassword} from "./components/ResetPassword/Resetpassword";
 import {ChangePassword} from "./components/ChangePassword.jsx/ChangPassword";
+import {Set} from "./components/Set/Set";
+
+//change background dark light
+import "./style/dark.scss";
+
+//redux
+import {useSelector} from "react-redux";
 import {Notification} from "./pages/Notification/Notification";
 
 
@@ -48,7 +52,7 @@ function App() {
 
             <Route path ="products" >
               <Route index element={<Product/>}/>
-              <Route path = "inforProduct" element={<InforProduct/>} />
+              <Route path = ":productId" element={<InforProduct/>} />
             </Route>
 
           </Route>

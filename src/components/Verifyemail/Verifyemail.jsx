@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import "./verifyemail.scss";
 import { AiOutlineHome } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 export const Verifyemail = () => {
+  const emailRef = useRef()
+  const [verifyEmail, setVerifyEmail] = useState("")
+
+
+  
+  useEffect(() => {
+    emailRef.current.focus();
+  }, []);
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    
+    
+
+  }
+
   return (
+
     <div className='verify' >
         <div className='banner' >
           KHAC NHU ADMIN
@@ -19,11 +37,13 @@ export const Verifyemail = () => {
         </div>
 
         <div className='verifyEmail' >
-            <h2>Verify Email ???</h2>
-            <label htmlFor='email'>Email:</label>
-            <input id = "email" type = "text" placeholder='type your email ...'/>
-            <br></br>
-            <button type = "submit" >Submit</button>
+            <form onSubmit={handleSubmit} >
+              <h2>Verify Email ???</h2>
+              <label htmlFor='email'>Email:</label>
+              <input ref = {emailRef} value = {verifyEmail} onChange = {(e)=>setVerifyEmail(e.target.value)}  id = "email" type = "text" placeholder='type your email ...'/>
+              <br></br>
+              <button type = "submit" disabled = {!verifyEmail ? true : false} >Submit</button>
+            </form>
             
             <div className = "footer" >
                 <Link to = "/" className = "home" ><AiOutlineHome/> Home</Link>
